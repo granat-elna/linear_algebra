@@ -1,0 +1,10 @@
+.DS_Store
+a.out
+a.exe
+.vscode/
+.dvi
+.aux
+.fls
+.log
+.fdb_latexmk
+.pyc
