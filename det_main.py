@@ -6,11 +6,11 @@ import time
 import det_n
 
 # 行列のサイズを指定
-n = input("type determinant size n >>> ")
+n = int(input("type determinant size n >>> "))
 # 行列の生成モードの選択. 1を入力するとランダム生成、2を入力するとマニュアル生成
 while True:
-    mode = input(
-        "type '1' to generate randomly, or '2' to specify manually >>> ")
+    mode = int(input(
+        "type '1' to generate randomly, or '2' to specify manually >>> "))
     if mode == 1 or mode == 2:
         break
     print("type just 1 or 2.")
