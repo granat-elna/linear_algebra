@@ -32,6 +32,7 @@ for i in range(n):
     x = np.append(x, np.array([x_row]), axis=0)
 
 print("Requested determinant: \n{}".format(x))
+x = x.astype(np.float64)
 t1 = time.time()
 numpy_d = LA.det(x)
 t2 = time.time() - t1
@@ -44,3 +45,11 @@ t2 = time.time() - t1
 # detn関数で求めた行列式
 print("Determinant(my program calculated): {}\nexecution time: {} sec."
       .format(my_d, t2))
+
+# 以下 固有値(澤本)
+t1 = time.time()
+e_v, e_m = LA.eig(x)
+print("Eigenvalue = \n{}".format(e_v))   # 固有値
+print("Eigenvector = \n{}".format(e_m))  # 固有ベクトル（大きさ1のベクトルに規格化されている）
+t2 = time.time() - t1
+print("Eigenvalue&Eigenvector time: {} sec.".format(t2))
